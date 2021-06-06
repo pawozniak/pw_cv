@@ -1,0 +1,230 @@
+/* General */
+body {
+    min-width: 700px;
+}
+
+/* Navigation */
+header {
+    width: 100%;
+}
+.navbar {
+    height: 4rem;
+    background-color: #F25D27;
+    position: fixed;
+    min-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    display: inline-block;
+    font-weight: 700;
+    margin: 0 1rem;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 0.5rem;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: #C4F2DD;
+
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;;
+}
+
+.hamburger {
+    display: none;
+    margin: 0 1rem 0 2rem;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: white;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+
+}
+
+@media only screen and (max-width: 768px){
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4rem;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+        background-color: #f29327;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        padding: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        transition: 0.3s;
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        transition: 0.3s;
+    }
+}
+
+
+/* Main */
+main {
+    min-width: 400px;
+    width: 80vw;
+    margin: auto;
+    padding: 4em 0;
+}
+
+.banner-image {
+    background-image: url(../images/istockphoto-1142187389-612x612.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80vw;
+    height: 50vh;
+    margin-bottom: 6vh;
+    background-position: center;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 5vh;
+}
+
+.profile{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    grid-gap: 5vh;
+    align-items: center;
+}
+
+.profile-image {
+    /* background-color: black; */
+    background-image: url(../images/avataaars.png);
+    /* background-position: center; */
+    width: 170px;
+    height: 170px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-self: center;
+    justify-self: center;
+}
+
+.profile-motto {
+    font-family: 'Fredoka One', cursive;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.profile-text {
+    font-family: 'Abel', sans-serif;
+    font-size: 1.2rem;
+}
+
+.stress1 {
+    color: #0367A6;
+    font-size: 2.4rem;
+}
+
+.stress2 {
+    color: #A7F205;
+    font-size: 2.4rem;
+}
+
+.stress3 {
+    color: #F2421B;
+    font-size: 2.4rem;
+}
+
+.profile-text {
+    text-align: justify;
+}
+
+.projects {
+    margin: 2rem 0;
+    padding: 2rem;
+    color: #0367A6;
+    font-weight: 700;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
+    border: 7px solid #0378A6;
+    line-height: 6rem;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+.projects > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+}
+
+.projects > ul > li {
+    background-color: #C4F2DD;
+}
+
+.fg-cpt {
+    font-size: 1rem;
+    line-height: 3rem;
+
+}
+
+footer {
+    height: 2rem;
+    background-color: #F25D27;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-family: 'Abel', sans-serif;
+    padding: 0.5rem 0;
+}
